@@ -1,12 +1,14 @@
 .button {
-  background-color: transparent;
+  width: 100%;
 
+  background-color: transparent;
   color: var(--ds-primary);
 
   border: 1px solid var(--ds-primary);
   border-radius: 4px;
 
   padding: 20px 28px;
+
   cursor: pointer;
 
   transition: background-color 0.15s ease-out;

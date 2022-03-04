@@ -2,18 +2,13 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Roboto Mono", monospace, -apple-system, BlinkMacSystemFont,
-    Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
-    Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
 }
 
 * {
   box-sizing: border-box;
+  font-family: "Roboto Mono", monospace, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif;
 }
 
 // Colors
@@ -33,8 +28,21 @@ a {
   --ds-text-primary-rgb: #{hexToRGB(#8892b0)};
   --ds-secondary: #a8b2d1;
   --ds-secondary-rgb: #{hexToRGB(#a8b2d1)};
+}
 
+:root {
   color: var(--ds-text-primary);
 
   background-color: var(--ds-bg-primary);
+}
+
+// Typography
+
+:root {
+  h1 {
+    font-size: 56px;
+  }
+  h2 {
+    font-size: 46px;
+  }
 }
