@@ -2,8 +2,9 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Roboto Mono", monospace, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif;
 }
 
 a {
@@ -13,4 +14,27 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+// Colors
+
+@function hexToRGB($hex) {
+  @return red($hex), green($hex), blue($hex);
+}
+
+:root {
+  --ds-bg-primary: #0a192f;
+  --ds-bg-primary-rgb: #{hexToRGB(#0a192f)};
+  --ds-primary: #64ffda;
+  --ds-primary-rgb: #{hexToRGB(#64ffda)};
+  --ds-text-accent: #ccd6f6;
+  --ds-text-accent-rgb: #{hexToRGB(#ccd6f6)};
+  --ds-text-primary: #8892b0;
+  --ds-text-primary-rgb: #{hexToRGB(#8892b0)};
+  --ds-secondary: #a8b2d1;
+  --ds-secondary-rgb: #{hexToRGB(#a8b2d1)};
+
+  color: var(--ds-text-primary);
+
+  background-color: var(--ds-bg-primary);
 }
