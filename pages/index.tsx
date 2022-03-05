@@ -8,6 +8,7 @@ import { faDownload, faFilePdf } from "@fortawesome/free-solid-svg-icons";
 
 import styles from "./home.module.scss";
 import Link from "next/link";
+import AboutSection from "../pageComponents/home/aboutSection";
 
 const Home: NextPage = () => {
   return (
@@ -34,8 +35,10 @@ const Home: NextPage = () => {
               />
             </div>
             <div>
-              <h1 className={styles.title}>Juan Rebella</h1>
-              <h2 className={styles.subtitle}>Software Engineer</h2>
+              <h1 className={styles.title}>
+                Juan Rebella <br />
+                <span className={styles.subtitle}>Software Engineer</span>
+              </h1>
             </div>
           </div>
 
@@ -56,7 +59,11 @@ const Home: NextPage = () => {
           </div>
         </section>
 
-        <section className={styles.section}>Other section </section>
+        <AboutSection />
+
+        <section>
+          <h2>Experience @TODO</h2>
+        </section>
       </main>
     </div>
   );

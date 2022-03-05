@@ -20,6 +20,8 @@ body {
 :root {
   --ds-bg-primary: #0a192f;
   --ds-bg-primary-rgb: #{hexToRGB(#0a192f)};
+  --ds-bg-accent: #233554;
+  --ds-bg-accent-rgb: #{hexToRGB(#233554)};
   --ds-primary: #64ffda;
   --ds-primary-rgb: #{hexToRGB(#64ffda)};
   --ds-text-accent: #ccd6f6;
