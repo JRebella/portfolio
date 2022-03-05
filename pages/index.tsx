@@ -12,7 +12,7 @@ import AboutSection from "../pageComponents/home/aboutSection";
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
+    <>
       <Head>
         <title>Juan Rebella | Software Engineer</title>
         <meta
@@ -23,7 +23,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <section className={styles.section}>
+        <section>
           <div className={styles["named-avatar"]}>
             <div className={styles.avatar}>
               <Image
@@ -65,7 +65,7 @@ const Home: NextPage = () => {
           <h2>Experience @TODO</h2>
         </section>
       </main>
-    </div>
+    </>
   );
 };
 
