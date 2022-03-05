@@ -1,0 +1,21 @@
+.icons {
+  fill: var(--ds-text-primary);
+
+  font-size: 64px;
+
+  svg path {
+    fill: currentColor;
+  }
+}
+
+.container {
+  cursor: pointer;
+
+  transition: fill, color 0.15s ease-out;
+  &:hover {
+    color: var(--ds-text-accent);
+    .icons {
+      fill: var(--ds-text-accent);
+    }
+  }
+}
