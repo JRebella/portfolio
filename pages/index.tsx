@@ -47,7 +47,7 @@ const Home: NextPage = () => {
 
             <div className={styles["button-container"]}>
               <span>On a hurry?</span>
-              <Link href="/Juan Rebella Jan 2022 ENG.pdf" passHref>
+              <Link href="/Juan Rebella2022.pdf" passHref>
                 <Button>
                   Download CV (.pdf) <FontAwesomeIcon icon={faDownload} />
                 </Button>
@@ -55,6 +55,8 @@ const Home: NextPage = () => {
             </div>
           </div>
         </section>
+
+        <section className={styles.section}>Other section </section>
       </main>
     </div>
   );
