@@ -9,7 +9,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+
+    justify-content: center;
 
     h2 {
       display: flex;
@@ -40,6 +41,10 @@
 
       margin-left: 20px;
     }
+  }
+
+  .home-section {
+    justify-content: space-between;
   }
 }
 

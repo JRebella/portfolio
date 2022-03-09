@@ -10,6 +10,7 @@ import styles from "./home.module.scss";
 import Link from "next/link";
 import AboutSection from "../pageComponents/about/aboutSection";
 import BuiltWith from "../pageComponents/home/builtWith";
+import ExperienceSection from "../pageComponents/experience/ExperienceSection";
 
 const Home: NextPage = () => {
   return (
@@ -24,7 +25,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <section>
+        <section className={styles["home-section"]}>
           <div />
           <div>
             <div className={styles["named-avatar"]}>
@@ -67,9 +68,7 @@ const Home: NextPage = () => {
 
         <AboutSection />
 
-        <section>
-          <h2>Experience @TODO</h2>
-        </section>
+        <ExperienceSection />
       </main>
     </>
   );

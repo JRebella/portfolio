@@ -19,7 +19,7 @@ const AboutSection: FunctionComponent<ComponentProps<"section">> = () => {
           If you're looking for a "robot" developer, I'm not your guy, I like to
           go deep into the business and understand it. If a requirement doesn't
           feel right to me or I think there's a better way of solving a problem,
-          I'll speak up try to sprout a discussion.
+          I'll speak up and do my best to sprout a productive discussion.
         </p>
       </div>
     </section>
