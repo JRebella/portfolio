@@ -5,12 +5,14 @@
 
   counter-reset: section;
   section {
-    min-height: 100vh;
+    min-height: 20vh;
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    justify-content: center;
+    justify-content: flex-start;
+
+    margin-top: 240px;
 
     h2 {
       display: flex;
@@ -45,6 +47,8 @@
 
   .home-section {
     justify-content: space-between;
+    margin-top: 0;
+    min-height: 100vh;
   }
 }
 

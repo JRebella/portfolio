@@ -26,7 +26,8 @@
 
   cursor: pointer;
 
-  transition: color 0.35s ease-out, background-color 0.15s ease-out;
+  transition: color 0.35s ease-out, background-color 0.15s ease-out,
+    border-color 0.35s ease-out;
 
   &:hover {
     background-color: var(--ds-bg-accent);
@@ -34,6 +35,7 @@
 
   &.active {
     color: var(--ds-primary);
+    border-color: var(--ds-primary);
   }
 }
 
