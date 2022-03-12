@@ -1,4 +1,5 @@
 import { ComponentProps, FunctionComponent, Key, useState } from "react";
+import Badge from "../../components/Badge/Badge";
 import AnchorLink from "../../components/Link/AnchorLink";
 import { TabContent, Tabs } from "../../components/Tabs/Tabs";
 
@@ -27,7 +28,6 @@ const ExperienceSection: FunctionComponent<ComponentProps<"section">> = () => {
             </AnchorLink>
           </h3>
           <h4>January 2021 - Present</h4>
-          <h5>Main technologies: React.js Next.js</h5>
 
           <ul>
             <li>
@@ -55,6 +55,19 @@ const ExperienceSection: FunctionComponent<ComponentProps<"section">> = () => {
               accessibility standards
             </li>
           </ul>
+
+          <h5>Main technologies</h5>
+
+          <Badge>React</Badge>
+          <Badge>Next.js</Badge>
+          <Badge>Sass</Badge>
+          <Badge>ES6</Badge>
+          <Badge>Storybook</Badge>
+          <Badge>Typescript</Badge>
+          <Badge>Node</Badge>
+          <Badge>Jest</Badge>
+          <Badge>Ava</Badge>
+          <Badge>Testing-library</Badge>
         </TabContent>
         <TabContent title="Oktana" id={"oktana"} className={styles["tab-container"]}>
           <h3 className={styles["job-title"]}>
@@ -84,6 +97,15 @@ const ExperienceSection: FunctionComponent<ComponentProps<"section">> = () => {
               variable periods of time and a multitude of filters and graphs
             </li>
           </ul>
+
+          <h5>Main technologies</h5>
+
+          <Badge>React</Badge>
+          <Badge>Node</Badge>
+          <Badge>Typescript</Badge>
+          <Badge>Redux</Badge>
+          <Badge>React Saga</Badge>
+          <Badge>Chart.js</Badge>
         </TabContent>
         <TabContent title="Marvik" id={"marvik"} className={styles["tab-container"]}>
           <h3 className={styles["job-title"]}>
@@ -119,6 +141,20 @@ const ExperienceSection: FunctionComponent<ComponentProps<"section">> = () => {
             </li>
             <li>Data visualization and analytics</li>
           </ul>
+
+          <h5>Main technologies</h5>
+
+          <Badge>React</Badge>
+          <Badge>GoLang</Badge>
+          <Badge>Redux</Badge>
+          <Badge>MySQL</Badge>
+          <Badge>MongoDB</Badge>
+          <Badge>React Native</Badge>
+          <Badge>Tensorflow.js</Badge>
+          <Badge>Python</Badge>
+          <Badge>Docker</Badge>
+          <Badge>AWS/Azure</Badge>
+          <Badge>AWS S3</Badge>
         </TabContent>
       </Tabs>
     </section>
