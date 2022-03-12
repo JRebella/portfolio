@@ -1,11 +1,39 @@
 .link {
-  font-weight: bold;
-
   text-decoration: none;
-  color: var(--ds-text-accent);
 
-  transition: color 0.2s ease-in;
-  &:hover {
+  &.accented {
+    font-weight: bold;
+    color: var(--ds-text-accent);
+
+    transition: color 0.2s ease-in;
+    &:hover {
+      color: var(--ds-primary);
+    }
+  }
+
+  &.colored {
     color: var(--ds-primary);
+    text-decoration: none;
+    position: relative;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+
+      width: 0px;
+      height: 1px;
+      display: block;
+
+      background-color: var(--ds-primary);
+      transition: width 0.25s ease-out;
+      opacity: 0.5;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
   }
 }

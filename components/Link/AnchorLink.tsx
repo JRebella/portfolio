@@ -3,11 +3,16 @@ import { ComponentPropsWithoutRef, FunctionComponent } from "react";
 
 import styles from "./anchorLink.module.scss";
 
-const AnchorLink: FunctionComponent<ComponentPropsWithoutRef<"a">> = ({
+interface AnchorProps extends ComponentPropsWithoutRef<"a"> {
+  variant?: "accented" | "colored";
+}
+
+const AnchorLink: FunctionComponent<AnchorProps> = ({
   className,
+  variant = "accented",
   ...props
 }) => {
-  return <a {...props} className={classNames(className, styles.link)} />;
+  return <a {...props} className={classNames(className, styles.link, styles[variant])} />;
 };
 
 export default AnchorLink;

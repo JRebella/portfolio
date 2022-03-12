@@ -32,9 +32,9 @@ const NavBar: FunctionComponent = () => {
         <li>
           <Link href={"#experience"}>Experience</Link>
         </li>
-        <li>
+        {/* <li>
           <Link href={"#projects"}>Projects</Link>
-        </li>
+        </li> */}
         <li>
           <Link href={"#contact"}>Contact</Link>
         </li>

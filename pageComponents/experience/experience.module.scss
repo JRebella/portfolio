@@ -42,29 +42,3 @@
     }
   }
 }
-
-.understrike-link {
-  color: var(--ds-primary);
-  text-decoration: none;
-  position: relative;
-
-  &::after {
-    content: "";
-
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-
-    width: 0px;
-    height: 1px;
-    display: block;
-
-    background-color: var(--ds-primary);
-    transition: width 0.25s ease-out;
-    opacity: 0.5;
-  }
-
-  &:hover::after {
-    width: 100%;
-  }
-}

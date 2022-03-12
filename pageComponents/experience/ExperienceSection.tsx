@@ -1,4 +1,5 @@
 import { ComponentProps, FunctionComponent, Key, useState } from "react";
+import AnchorLink from "../../components/Link/AnchorLink";
 import { TabContent, Tabs } from "../../components/Tabs/Tabs";
 
 import styles from "./experience.module.scss";
@@ -16,14 +17,14 @@ const ExperienceSection: FunctionComponent<ComponentProps<"section">> = () => {
         >
           <h3 className={styles["job-title"]}>
             Frontend Engineer{" "}
-            <a
+            <AnchorLink
               href="https://www.sparkdigital.com/en/"
               target={"_blank"}
               rel="noreferrer"
-              className={styles["understrike-link"]}
+              variant="colored"
             >
               @ Spark Digital
-            </a>
+            </AnchorLink>
           </h3>
           <h4>January 2021 - Present</h4>
           <h5>Main technologies: React.js Next.js</h5>
@@ -38,14 +39,14 @@ const ExperienceSection: FunctionComponent<ComponentProps<"section">> = () => {
             <li>
               <div>
                 Contributed to the development and technical design of an{" "}
-                <a
+                <AnchorLink
                   href="https://github.com/wwnorton/design-system"
                   target={"_blank"}
                   rel="noreferrer"
-                  className={styles["understrike-link"]}
+                  variant="colored"
                 >
                   open source
-                </a>{" "}
+                </AnchorLink>{" "}
                 design system with a focus on accessibility
               </div>
             </li>
@@ -58,14 +59,14 @@ const ExperienceSection: FunctionComponent<ComponentProps<"section">> = () => {
         <TabContent title="Oktana" id={"oktana"} className={styles["tab-container"]}>
           <h3 className={styles["job-title"]}>
             Frontend Engineer{" "}
-            <a
+            <AnchorLink
               href="https://oktana.com/"
               target={"_blank"}
               rel="noreferrer"
-              className={styles["understrike-link"]}
+              variant="colored"
             >
               @ Oktana
-            </a>
+            </AnchorLink>
           </h3>
           <h4>July 2020 - January 2021</h4>
 
@@ -87,14 +88,14 @@ const ExperienceSection: FunctionComponent<ComponentProps<"section">> = () => {
         <TabContent title="Marvik" id={"marvik"} className={styles["tab-container"]}>
           <h3 className={styles["job-title"]}>
             Full Stack Engineer{" "}
-            <a
+            <AnchorLink
               href="https://marvik.ai/"
               target={"_blank"}
               rel="noreferrer"
-              className={styles["understrike-link"]}
+              variant="colored"
             >
               @ Marvik
-            </a>
+            </AnchorLink>
           </h3>
           <h4>October 2018 - July 2020</h4>
           <p>
