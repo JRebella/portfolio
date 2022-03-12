@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import AboutSection from "../pageComponents/about/aboutSection";
+import ContactSection from "../pageComponents/contact/ContactSection";
 import ExperienceSection from "../pageComponents/experience/ExperienceSection";
 import HomeSection from "../pageComponents/home/HomeSection";
 
@@ -15,8 +16,8 @@ const Home: NextPage = () => {
 
       <HomeSection />
       <AboutSection />
-
       <ExperienceSection />
+      <ContactSection />
     </>
   );
 };

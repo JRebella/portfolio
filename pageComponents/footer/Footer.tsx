@@ -1,4 +1,4 @@
-import { faReact } from "@fortawesome/free-brands-svg-icons";
+import { faReact, faSass } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import { ComponentProps, FunctionComponent } from "react";
@@ -10,12 +10,12 @@ const Footer: FunctionComponent<ComponentProps<"section">> = () => {
   return (
     <Link href="/about-this-portfolio" passHref>
       <div className={styles.container}>
-        <div>Built with</div>
+        <div>By Juan Rebella, built with</div>
         <div className={styles.icons}>
           <FontAwesomeIcon icon={faReact} />
-          <VercelLogo className="svg-inline--fa" />
-
+          <FontAwesomeIcon icon={faSass} />
           <NextJsLogo className="svg-inline--fa" />
+          <VercelLogo className="svg-inline--fa" />
         </div>
       </div>
     </Link>

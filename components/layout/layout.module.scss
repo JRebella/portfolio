@@ -126,3 +126,38 @@
   display: flex;
   justify-content: center;
 }
+
+@each $position in ("right", "left") {
+  .aside--#{$position} {
+    position: fixed;
+
+    @if $position == "right" {
+      right: 40px;
+      writing-mode: vertical-lr;
+    } @else if $position == "left" {
+      left: 40px;
+      writing-mode: sideways-lr;
+    }
+
+    bottom: 0;
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+
+    &::#{if($position == "right", "after", "before")} {
+      content: "";
+      display: block;
+      height: 128px;
+      width: 10px;
+
+      background-color: var(--ds-bg-accent);
+
+      @if $position == "right" {
+        margin-top: 20px;
+      } @else if $position == "left" {
+        margin-top: 20px;
+      }
+    }
+  }
+}
