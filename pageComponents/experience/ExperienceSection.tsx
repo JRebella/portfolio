@@ -6,7 +6,7 @@ import styles from "./experience.module.scss";
 const ExperienceSection: FunctionComponent<ComponentProps<"section">> = () => {
   const [active, setActive] = useState<Key>("spark");
   return (
-    <section className={styles.container}>
+    <section className={styles.container} id="experience">
       <h2>My Experience</h2>
       <Tabs onChangeTabID={setActive} activeTabID={active}>
         <TabContent

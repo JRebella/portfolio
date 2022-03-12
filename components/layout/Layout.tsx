@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { FunctionComponent } from "react";
+import Footer from "../../pageComponents/footer/Footer";
 
 import styles from "./layout.module.scss";
 
@@ -7,7 +8,10 @@ const Layout: FunctionComponent = ({ children }) => {
   return (
     <>
       <NavBar />
-      <main>{children}</main>
+      <main className={styles.main}>{children}</main>
+      <footer className={styles.footer}>
+        <Footer />
+      </footer>
     </>
   );
 };
@@ -20,13 +24,13 @@ const NavBar: FunctionComponent = () => {
       </Link>
       <ol className={styles["link-list"]}>
         <li>
-          <Link href={"/"}>About</Link>
+          <Link href={"#about"}>About</Link>
         </li>
         <li>
-          <Link href={"#about"}>Experience</Link>
+          <Link href={"#experience"}>Experience</Link>
         </li>
         <li>
-          <Link href={"#experience"}>Projects</Link>
+          <Link href={"#projects"}>Projects</Link>
         </li>
         <li>
           <Link href={"#contact"}>Contact</Link>

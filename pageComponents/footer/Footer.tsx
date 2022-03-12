@@ -1,20 +1,12 @@
-import {
-  faFontAwesome,
-  faReact,
-  faSass,
-} from "@fortawesome/free-brands-svg-icons";
-import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
+import { faReact } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Image from "next/image";
 import Link from "next/link";
 import { ComponentProps, FunctionComponent } from "react";
-
 import NextJsLogo from "../../public/logo-nextjs.svg";
 import VercelLogo from "../../public/logo-vercel.svg";
+import styles from "./footer.module.scss";
 
-import styles from "./builtWith.module.scss";
-
-const BuiltWith: FunctionComponent<ComponentProps<"section">> = () => {
+const Footer: FunctionComponent<ComponentProps<"section">> = () => {
   return (
     <Link href="/about-this-portfolio" passHref>
       <div className={styles.container}>
@@ -30,4 +22,4 @@ const BuiltWith: FunctionComponent<ComponentProps<"section">> = () => {
   );
 };
 
-export default BuiltWith;
+export default Footer;

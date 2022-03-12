@@ -4,7 +4,7 @@ import styles from "./about.module.scss";
 
 const AboutSection: FunctionComponent<ComponentProps<"section">> = () => {
   return (
-    <section className={styles.container}>
+    <section className={styles.container} id="about">
       <h2>About me</h2>
 
       <div>

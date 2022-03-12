@@ -73,3 +73,56 @@
     }
   }
 }
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  counter-reset: section;
+  section {
+    min-height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    justify-content: flex-start;
+
+    margin-top: 240px;
+
+    h2 {
+      display: flex;
+      align-items: center;
+      width: 100%;
+
+      font-size: 24px;
+      color: var(--ds-text-accent);
+    }
+
+    h2::before {
+      counter-increment: section;
+      content: "0" counter(section) ".";
+
+      font-weight: normal;
+      color: var(--ds-primary);
+
+      margin-right: 8px;
+    }
+
+    h2::after {
+      content: "";
+      display: inline-block;
+      flex-grow: 1;
+      height: 1px;
+
+      background-color: var(--ds-bg-accent);
+
+      margin-left: 20px;
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+}
