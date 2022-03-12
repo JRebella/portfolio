@@ -22,7 +22,7 @@ const About: NextPage = () => {
             portfolio (including color palette and visual arrangement) was heavily
             inspired on{" "}
             <AnchorLink href="https://brittanychiang.com/" target={"_blank"}>
-              Brittany Chiang's
+              Brittany Chiang&apos;s
             </AnchorLink>{" "}
             portfolio. Although her portfolio is{" "}
             <AnchorLink href="https://github.com/bchiang7/v4" target={"_blank"}>

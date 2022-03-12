@@ -9,7 +9,7 @@ const AboutSection: FunctionComponent<ComponentProps<"section">> = () => {
       <h2>About me</h2>
 
       <p>
-        Hey there, I'm <span className="text-accent">Juan</span>. I'm a{" "}
+        Hey there, I&apos;m <span className="text-accent">Juan</span>. I&apos;m a{" "}
         <span className="text-accent">software engineer from Uruguay</span> and I
         specialize myself on frontend development with{" "}
         <span className="text-accent">React.js.</span>
@@ -23,7 +23,7 @@ const AboutSection: FunctionComponent<ComponentProps<"section">> = () => {
       </p>
 
       <p>
-        Today I'm currently working on building an{" "}
+        Today I&apos;m currently working on building an{" "}
         <AnchorLink
           href="https://wwnorton.github.io/design-system/"
           target={"_blank"}
