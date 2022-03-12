@@ -10,7 +10,6 @@ import styles from "./home.module.scss";
 const HomeSection: FunctionComponent<ComponentProps<"section">> = () => {
   return (
     <section className={styles.container} id="home">
-      <div />
       <div>
         <div className={styles["named-avatar"]}>
           <div className={styles.avatar}>

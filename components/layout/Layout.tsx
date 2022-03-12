@@ -6,7 +6,7 @@ import styles from "./layout.module.scss";
 
 const Layout: FunctionComponent = ({ children }) => {
   return (
-    <>
+    <div className={styles.container}>
       <NavBar />
       <main className={styles.main}>{children}</main>
       <footer className={styles.footer}>
@@ -15,7 +15,7 @@ const Layout: FunctionComponent = ({ children }) => {
 
       <aside className={styles["aside--left"]}>JUAN REBELLA - SOFTWARE ENGINEER</aside>
       <aside className={styles["aside--right"]}>JUAN REBELLA - SOFTWARE ENGINEER</aside>
-    </>
+    </div>
   );
 };
 

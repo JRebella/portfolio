@@ -8,7 +8,7 @@ import styles from "./footer.module.scss";
 
 const Footer: FunctionComponent<ComponentProps<"section">> = () => {
   return (
-    <Link href="/about-this-portfolio" passHref>
+    <Link href="/about" passHref>
       <div className={styles.container}>
         <div>By Juan Rebella, built with</div>
         <div className={styles.icons}>
