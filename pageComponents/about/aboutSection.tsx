@@ -31,7 +31,9 @@ const AboutSection: FunctionComponent<ComponentProps<"section">> = () => {
         >
           open source design system
         </AnchorLink>{" "}
-        with a focus on accessibility using React & Sass (along many other technologies).
+        with a focus on <span className="text-accent">accessibility</span> using{" "}
+        <span className="text-accent">React</span> &{" "}
+        <span className="text-accent">Sass</span> (along many other technologies).
       </p>
     </section>
   );

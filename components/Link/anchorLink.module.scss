@@ -1,6 +1,8 @@
 .link {
   text-decoration: none;
 
+  white-space: nowrap;
+
   &.accented {
     font-weight: bold;
     color: var(--ds-text-accent);
