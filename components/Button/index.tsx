@@ -1,9 +1,5 @@
 import classNames from "classnames";
-import {
-  ComponentProps,
-  ComponentPropsWithoutRef,
-  FunctionComponent,
-} from "react";
+import { ComponentPropsWithoutRef, FunctionComponent } from "react";
 
 import styles from "./button.module.scss";
 

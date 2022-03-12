@@ -1,0 +1,11 @@
+.link {
+  font-weight: bold;
+
+  text-decoration: none;
+  color: var(--ds-text-accent);
+
+  transition: color 0.2s ease-in;
+  &:hover {
+    color: var(--ds-primary);
+  }
+}

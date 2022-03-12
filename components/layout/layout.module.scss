@@ -81,14 +81,14 @@
 
   counter-reset: section;
   section {
-    min-height: 20vh;
+    min-height: 60vh;
     display: flex;
     flex-direction: column;
     align-items: center;
 
     justify-content: flex-start;
 
-    margin-top: 240px;
+    margin-top: 20px;
 
     h2 {
       display: flex;
@@ -125,6 +125,7 @@
 .footer {
   display: flex;
   justify-content: center;
+  margin-top: 48px;
 }
 
 @each $position in ("right", "left") {
