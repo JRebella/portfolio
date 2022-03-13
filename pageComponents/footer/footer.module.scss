@@ -1,0 +1,23 @@
+.icons {
+  fill: var(--ds-text-primary);
+
+  font-size: 48px;
+
+  svg path {
+    fill: currentColor;
+  }
+
+  *:not(:last-child) {
+    margin-right: 8px;
+  }
+}
+
+.container {
+  cursor: pointer;
+  font-size: 12px;
+
+  transition: fill, color 0.25s ease-out;
+  &:hover {
+    color: var(--ds-primary);
+  }
+}

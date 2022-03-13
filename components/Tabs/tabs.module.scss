@@ -1,0 +1,55 @@
+.container {
+  width: 100%;
+
+  display: flex;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+
+  margin-right: 20px;
+
+  flex-shrink: 0;
+}
+
+.button {
+  font-size: 14px;
+  text-align: left;
+  padding: 15px 20px;
+
+  background-color: transparent;
+
+  border: none;
+  border-left: 2px solid var(--ds-bg-accent);
+  color: var(--ds-text-primary);
+
+  cursor: pointer;
+
+  transition: color 0.35s ease-out, background-color 0.15s ease-out,
+    border-color 0.35s ease-out;
+
+  &:hover {
+    background-color: var(--ds-bg-accent);
+  }
+
+  &.active {
+    color: var(--ds-primary);
+    border-color: var(--ds-primary);
+  }
+}
+
+.tab-content-container {
+  position: relative;
+  flex-grow: 1;
+}
+
+.tab-content {
+  position: absolute;
+
+  transition: visibility 0.2s ease-out, opacity 0.2s linear;
+  &[data-hidden="true"] {
+    opacity: 0;
+    visibility: hidden;
+  }
+}

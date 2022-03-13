@@ -1,0 +1,23 @@
+.badge {
+  --base-color: var(--ds-primary);
+
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 2px solid var(--base-color);
+  border-radius: 16px;
+
+  padding: 2px 8px;
+  font-weight: bold;
+
+  background-color: transparent;
+  color: var(--base-color);
+
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  margin-bottom: 8px;
+}

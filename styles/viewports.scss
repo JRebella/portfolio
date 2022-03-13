@@ -1,0 +1,22 @@
+// Viewports
+
+$layout-breakpoint-small: 699px;
+$layout-breakpoint-medium: 1199px;
+
+@mixin viewport-xs {
+  @media (max-width: $layout-breakpoint-small) {
+    @content;
+  }
+}
+
+@mixin viewport-md {
+  @media (min-width: calc($layout-breakpoint-small + 1px)) and (max-width: $layout-breakpoint-medium) {
+    @content;
+  }
+}
+
+@mixin viewport-xl {
+  @media (min-width: calc($layout-breakpoint-medium + 1px)) {
+    @content;
+  }
+}
