@@ -9,7 +9,7 @@ import styles from "./home.module.scss";
 
 const HomeSection: FunctionComponent<ComponentProps<"section">> = () => {
   return (
-    <section className={styles.container} id="home">
+    <section className={styles.container} id="home" aria-labelledby="section-home">
       <div>
         <div className={styles["named-avatar"]}>
           <div className={styles.avatar}>
@@ -22,7 +22,7 @@ const HomeSection: FunctionComponent<ComponentProps<"section">> = () => {
             />
           </div>
           <div>
-            <h1 className={styles.title}>
+            <h1 className={styles.title} id="section-home">
               Juan Rebella <br />
               <span className={styles.subtitle}>Software Engineer</span>
             </h1>

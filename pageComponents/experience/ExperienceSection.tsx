@@ -8,8 +8,12 @@ import styles from "./experience.module.scss";
 const ExperienceSection: FunctionComponent<ComponentProps<"section">> = () => {
   const [active, setActive] = useState<Key>("spark");
   return (
-    <section className={styles.container} id="experience">
-      <h2>My Experience</h2>
+    <section
+      className={styles.container}
+      id="experience"
+      aria-labelledby="section-experience"
+    >
+      <h2 id="section-experience">My Experience</h2>
       <Tabs onChangeTabID={setActive} activeTabID={active}>
         <TabContent
           title="Spark Digital"
@@ -29,7 +33,7 @@ const ExperienceSection: FunctionComponent<ComponentProps<"section">> = () => {
           </h3>
           <h4>January 2021 - Present</h4>
 
-          <ul>
+          <ul className="styled-ul">
             <li>
               Frontend technology lead and main developer for a fully-accessible platform
               in the EdTech industry. Large data visualization and manipulation within a
@@ -83,7 +87,7 @@ const ExperienceSection: FunctionComponent<ComponentProps<"section">> = () => {
           </h3>
           <h4>July 2020 - January 2021</h4>
 
-          <ul>
+          <ul className="styled-ul">
             <li>
               Collaborated with multiple scrum teams for a large investment platform for
               the FinTech industry
@@ -125,7 +129,7 @@ const ExperienceSection: FunctionComponent<ComponentProps<"section">> = () => {
             little bit of everything across many small/medium projects. From fullstack
             development to DevOps, machine learning and data processing algorithms
           </p>
-          <ul>
+          <ul className="styled-ul">
             <li>
               Built and shipped a chatbot platform for realtime monitoring and human
               take-over

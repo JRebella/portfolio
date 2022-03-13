@@ -9,8 +9,8 @@ import styles from "./contact.module.scss";
 
 const ContactSection: FunctionComponent<ComponentProps<"section">> = () => {
   return (
-    <section className={styles.container} id="contact">
-      <h2>Contact Me</h2>
+    <section className={styles.container} id="contact" aria-labelledby="section-contact">
+      <h2 id="section-contact">Contact Me</h2>
       <p>
         Do you have an interesting project and think I could be a good fit?
         <br />

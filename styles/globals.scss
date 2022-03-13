@@ -1,3 +1,5 @@
+@use "./components/UnorderedList/ul.module.scss" as *;
+
 html,
 body {
   padding: 0;
@@ -59,4 +61,10 @@ body {
 
 .text-accent {
   color: var(--ds-text-accent);
+}
+
+// Components
+
+.styled-ul {
+  @include unordered-list;
 }

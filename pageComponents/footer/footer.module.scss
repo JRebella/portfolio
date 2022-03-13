@@ -16,11 +16,8 @@
   cursor: pointer;
   font-size: 12px;
 
-  transition: fill, color 0.15s ease-out;
+  transition: fill, color 0.25s ease-out;
   &:hover {
-    color: var(--ds-text-accent);
-    .icons {
-      fill: var(--ds-text-accent);
-    }
+    color: var(--ds-primary);
   }
 }

@@ -1,0 +1,20 @@
+@mixin unordered-list {
+  padding: 0;
+  list-style: none;
+
+  li {
+    margin-bottom: 18px;
+    display: flex;
+    white-space: pre-wrap;
+
+    &::before {
+      content: "▹";
+      display: block;
+
+      color: var(--ds-primary);
+      font-size: 16px;
+      line-height: 1.1;
+      margin-right: 8px;
+    }
+  }
+}

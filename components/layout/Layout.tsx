@@ -27,16 +27,16 @@ const NavBar: FunctionComponent = () => {
       </Link>
       <ol className={styles["link-list"]}>
         <li>
-          <Link href={"#about"}>About</Link>
+          <Link href={"/#about"}>About</Link>
         </li>
         <li>
-          <Link href={"#experience"}>Experience</Link>
+          <Link href={"/#experience"}>Experience</Link>
         </li>
         {/* <li>
           <Link href={"#projects"}>Projects</Link>
         </li> */}
         <li>
-          <Link href={"#contact"}>Contact</Link>
+          <Link href={"/#contact"}>Contact</Link>
         </li>
       </ol>
     </nav>

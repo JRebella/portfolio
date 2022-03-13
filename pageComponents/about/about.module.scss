@@ -1,7 +1,40 @@
-section.container {
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  margin-bottom: 20vh;
+}
+
+section.section-container {
   max-width: 500px;
 
   align-items: flex-start;
+  min-height: min-content;
 
   margin-top: 0;
+
+  text-align: justify;
+}
+
+.technologies {
+  color: var(--ds-text-accent);
+  margin: 12px 64px;
+  padding: 10px 20px;
+  background-color: var(--ds-bg-accent);
+  h3 {
+    font-weight: 100;
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(140px, 200px));
+    gap: 0px 10px;
+
+    li {
+      margin-bottom: 4px;
+    }
+  }
 }

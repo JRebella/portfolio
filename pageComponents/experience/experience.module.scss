@@ -22,23 +22,4 @@
   h5 {
     color: var(--ds-text-accent);
   }
-
-  ul {
-    padding: 0;
-    list-style: none;
-
-    li {
-      margin-bottom: 18px;
-      display: flex;
-      &::before {
-        content: "▹";
-        display: block;
-
-        color: var(--ds-primary);
-        font-size: 16px;
-        line-height: 1.1;
-        margin-right: 8px;
-      }
-    }
-  }
 }

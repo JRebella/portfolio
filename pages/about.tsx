@@ -41,11 +41,15 @@ const About: NextPage = () => {
           <hr />
           <p>This project was built with the following technologies:</p>
 
-          <ul>
+          <ul className="styled-ul">
             <li>React / Next.js</li>
             <li>Sass & CSS for styles</li>
             <li>
-              <AnchorLink variant="colored" href="https://vercel.com/" target={"_blank"}>
+              <AnchorLink
+                variant="colored"
+                href="https://vercel.com/home"
+                target={"_blank"}
+              >
                 Vercel
               </AnchorLink>{" "}
               for continuous deployments
