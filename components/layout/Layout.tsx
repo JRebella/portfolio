@@ -1,5 +1,7 @@
+import classNames from "classnames";
 import Link from "next/link";
 import { FunctionComponent } from "react";
+import useScroll from "../../hooks/UseScroll";
 import Footer from "../../pageComponents/footer/Footer";
 
 import styles from "./layout.module.scss";
@@ -20,8 +22,9 @@ const Layout: FunctionComponent = ({ children }) => {
 };
 
 const NavBar: FunctionComponent = () => {
+  const { state } = useScroll();
   return (
-    <nav className={styles.navbar}>
+    <nav className={classNames(styles.navbar, styles[`navbar--${state}`])}>
       <Link href={"/"} passHref>
         <div className={styles["jr-icon"]}>JR</div>
       </Link>
