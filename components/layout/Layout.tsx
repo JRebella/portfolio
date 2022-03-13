@@ -15,8 +15,22 @@ const Layout: FunctionComponent = ({ children }) => {
         <Footer />
       </footer>
 
-      <aside className={styles["banner--left"]}>JUAN REBELLA - SOFTWARE ENGINEER</aside>
-      <aside className={styles["banner--right"]}>JUAN REBELLA - SOFTWARE ENGINEER</aside>
+      <aside
+        className={classNames(
+          styles["banner--left"],
+          "animate__animated animate__fadeInUp"
+        )}
+      >
+        JUAN REBELLA - SOFTWARE ENGINEER
+      </aside>
+      <aside
+        className={classNames(
+          styles["banner--right"],
+          "animate__animated animate__fadeInUp"
+        )}
+      >
+        JUAN REBELLA - SOFTWARE ENGINEER
+      </aside>
 
       <div className={styles["mobile-warning"]}>
         <dialog>
@@ -33,9 +47,21 @@ const NavBar: FunctionComponent = () => {
   return (
     <nav className={classNames(styles.navbar, styles[`navbar--${state}`])}>
       <Link href={"/"} passHref>
-        <div className={styles["jr-icon"]}>JR</div>
+        <div
+          className={classNames(
+            styles["jr-icon"],
+            "animate__animated  animate__fadeInDown"
+          )}
+        >
+          JR
+        </div>
       </Link>
-      <ol className={styles["link-list"]}>
+      <ol
+        className={classNames(
+          styles["link-list"],
+          "animate__animated  animate__fadeInDown"
+        )}
+      >
         <li>
           <Link href={"/#about"}>About</Link>
         </li>
