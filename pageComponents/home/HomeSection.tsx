@@ -16,7 +16,7 @@ const HomeSection: FunctionComponent<ComponentProps<"section">> = () => {
       aria-labelledby="section-home"
     >
       <div />
-      <div>
+      <div className={styles.content}>
         <div className={styles["named-avatar"]}>
           <div className={styles.avatar}>
             <Image
