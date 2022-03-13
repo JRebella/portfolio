@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Badge from "../components/Badge/Badge";
@@ -13,7 +14,9 @@ const About: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <section className={styles.container}>
+      <section
+        className={classNames(styles.container, "animate__animated  animate__fadeInDown")}
+      >
         <div>
           <h1>About this Portfolio / Credits</h1>
 
@@ -51,8 +54,8 @@ const About: NextPage = () => {
                 target={"_blank"}
               >
                 Vercel
-              </AnchorLink>{" "}
-              for continuous deployments
+              </AnchorLink>
+              <span> for continuous deployments</span>
             </li>
           </ul>
 

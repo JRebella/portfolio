@@ -9,8 +9,10 @@ section.container {
 
   max-width: 700px;
 
+  padding-top: 30px;
+
   hr {
-    color: var(--ds-bg-accent);
+    border-color: var(--ds-bg-accent);
   }
 
   h1 {

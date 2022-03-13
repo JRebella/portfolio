@@ -1,5 +1,6 @@
-import { faDownload } from "@fortawesome/free-solid-svg-icons";
+import { faAnglesDown, faArrowDown, faDownload } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import classNames from "classnames";
 import Image from "next/image";
 import Link from "next/link";
 import { ComponentProps, FunctionComponent, Key, useState } from "react";
@@ -9,7 +10,12 @@ import styles from "./home.module.scss";
 
 const HomeSection: FunctionComponent<ComponentProps<"section">> = () => {
   return (
-    <section className={styles.container} id="home" aria-labelledby="section-home">
+    <section
+      className={classNames(styles.container, "animate__animated  animate__fadeInDown")}
+      id="home"
+      aria-labelledby="section-home"
+    >
+      <div />
       <div>
         <div className={styles["named-avatar"]}>
           <div className={styles.avatar}>
@@ -47,6 +53,11 @@ const HomeSection: FunctionComponent<ComponentProps<"section">> = () => {
           </div>
         </div>
       </div>
+
+      <FontAwesomeIcon
+        icon={faAnglesDown}
+        className={classNames(styles["more-arrow"], "animate__animated animate__shakeY ")}
+      />
     </section>
   );
 };

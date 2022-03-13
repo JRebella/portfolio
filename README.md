@@ -1,8 +1,8 @@
-# Juan Rebella
+# Juan Rebella Personal Portfolio
 
 This is my personal portfolio for showcasing my professional experience as a software engineer.
 
-This project is still under development and no releases have been published yet.
+You can visit the live version [here](https://www.juanrebella.dev/)
 
 ## Social Media
 
