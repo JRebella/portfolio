@@ -1,9 +1,13 @@
+@use "../../styles/viewports.scss" as *;
+
 .container {
   min-height: 100vh;
 
   display: flex;
   flex-direction: column;
 }
+
+// Navbar
 
 .navbar {
   position: fixed;
@@ -97,6 +101,8 @@
   }
 }
 
+// Main
+
 .main {
   flex-grow: 1;
   display: flex;
@@ -144,7 +150,21 @@
       margin-left: 20px;
     }
   }
+
+  // margins
+
+  @include viewport-xs {
+    padding: 0px 25px;
+  }
+  @include viewport-md {
+    padding: 0px 50px;
+  }
+  @include viewport-xl {
+    padding: 0px 150px;
+  }
 }
+
+// Footer
 
 .footer {
   display: flex;
@@ -154,6 +174,13 @@
 
 @each $position in ("right", "left") {
   .banner--#{$position} {
+    @include viewport-xs {
+      display: none;
+    }
+    @include viewport-md {
+      display: none;
+    }
+
     position: fixed;
 
     writing-mode: vertical-lr;
@@ -179,5 +206,32 @@
 
       margin-top: 20px;
     }
+  }
+}
+
+.mobile-warning {
+  display: none;
+  @include viewport-xs {
+    display: initial;
+  }
+
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: var(--ds-shadow);
+
+  dialog {
+    display: initial;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    top: 50%;
+
+    background-color: var(--ds-bg-accent);
+    color: var(--ds-text-accent);
+
+    border-color: var(--ds-primary);
+
+    width: 300px;
   }
 }

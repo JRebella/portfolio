@@ -17,6 +17,13 @@ const Layout: FunctionComponent = ({ children }) => {
 
       <aside className={styles["banner--left"]}>JUAN REBELLA - SOFTWARE ENGINEER</aside>
       <aside className={styles["banner--right"]}>JUAN REBELLA - SOFTWARE ENGINEER</aside>
+
+      <div className={styles["mobile-warning"]}>
+        <dialog>
+          Attention, the mobile version is still under construction. Please use the
+          desktop version for now!
+        </dialog>
+      </div>
     </div>
   );
 };
