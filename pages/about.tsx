@@ -51,8 +51,8 @@ const About: NextPage = () => {
                 target={"_blank"}
               >
                 Vercel
-              </AnchorLink>{" "}
-              for continuous deployments
+              </AnchorLink>
+              <span> for continuous deployments</span>
             </li>
           </ul>
 
