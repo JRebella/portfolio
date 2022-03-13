@@ -13,8 +13,8 @@ const Layout: FunctionComponent = ({ children }) => {
         <Footer />
       </footer>
 
-      <aside className={styles["aside--left"]}>JUAN REBELLA - SOFTWARE ENGINEER</aside>
-      <aside className={styles["aside--right"]}>JUAN REBELLA - SOFTWARE ENGINEER</aside>
+      <aside className={styles["banner--left"]}>JUAN REBELLA - SOFTWARE ENGINEER</aside>
+      <aside className={styles["banner--right"]}>JUAN REBELLA - SOFTWARE ENGINEER</aside>
     </div>
   );
 };

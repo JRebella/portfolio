@@ -137,15 +137,14 @@
 }
 
 @each $position in ("right", "left") {
-  .aside--#{$position} {
+  .banner--#{$position} {
     position: fixed;
 
+    writing-mode: vertical-lr;
     @if $position == "right" {
       right: 40px;
-      writing-mode: vertical-lr;
     } @else if $position == "left" {
       left: 40px;
-      writing-mode: sideways-lr;
     }
 
     bottom: 0;
@@ -154,7 +153,7 @@
     display: flex;
     align-items: center;
 
-    &::#{if($position == "right", "after", "before")} {
+    &::after {
       content: "";
       display: block;
       height: 128px;
@@ -162,11 +161,7 @@
 
       background-color: var(--ds-bg-accent);
 
-      @if $position == "right" {
-        margin-top: 20px;
-      } @else if $position == "left" {
-        margin-top: 20px;
-      }
+      margin-top: 20px;
     }
   }
 }
