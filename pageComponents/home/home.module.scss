@@ -59,8 +59,17 @@ section.container {
 .more-arrow {
   color: var(--ds-primary);
 
+  cursor: pointer;
+
   animation-delay: 1.2s;
   --animate-duration: 2s;
 
   margin-bottom: 24px;
+  opacity: 0;
+
+  transition: opacity 0.5s ease-in;
+}
+
+.more-arrow--top {
+  opacity: 1;
 }

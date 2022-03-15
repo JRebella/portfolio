@@ -5,10 +5,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { ComponentProps, FunctionComponent, Key, useState } from "react";
 import Button from "../../components/Button";
+import useScroll from "../../hooks/UseScroll";
 
 import styles from "./home.module.scss";
 
 const HomeSection: FunctionComponent<ComponentProps<"section">> = () => {
+  const { state } = useScroll(800);
   return (
     <section
       className={classNames(styles.container, "animate__animated  animate__fadeInDown")}
@@ -53,11 +55,16 @@ const HomeSection: FunctionComponent<ComponentProps<"section">> = () => {
           </div>
         </div>
       </div>
-
-      <FontAwesomeIcon
-        icon={faAnglesDown}
-        className={classNames(styles["more-arrow"], "animate__animated animate__shakeY ")}
-      />
+      <Link href="#about" passHref>
+        <FontAwesomeIcon
+          icon={faAnglesDown}
+          className={classNames(
+            styles["more-arrow"],
+            styles[`more-arrow--${state}`],
+            "animate__animated animate__shakeY"
+          )}
+        />
+      </Link>
     </section>
   );
 };

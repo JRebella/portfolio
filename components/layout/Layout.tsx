@@ -43,7 +43,7 @@ const Layout: FunctionComponent = ({ children }) => {
 };
 
 const NavBar: FunctionComponent = () => {
-  const { state } = useScroll();
+  const { state } = useScroll(80);
   return (
     <nav className={classNames(styles.navbar, styles[`navbar--${state}`])}>
       <Link href={"/"} passHref>
