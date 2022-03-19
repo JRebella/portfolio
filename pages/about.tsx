@@ -1,7 +1,6 @@
 import classNames from "classnames";
 import type { NextPage } from "next";
 import Head from "next/head";
-import Badge from "../components/Badge/Badge";
 import AnchorLink from "../components/Link/AnchorLink";
 import styles from "./about.module.scss";
 
@@ -16,6 +15,7 @@ const About: NextPage = () => {
 
       <section
         className={classNames(styles.container, "animate__animated  animate__fadeInDown")}
+        id="about-this-portfolio"
       >
         <div>
           <h1>About this Portfolio / Credits</h1>

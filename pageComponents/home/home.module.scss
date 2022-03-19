@@ -1,3 +1,5 @@
+@use "../../styles/viewports.scss" as *;
+
 section.container {
   justify-content: space-between;
   margin-top: 0;
@@ -6,6 +8,10 @@ section.container {
 
 .content {
   margin: 128px 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .title {
@@ -16,6 +22,16 @@ section.container {
   display: flex;
   align-items: center;
   margin-bottom: 80px;
+
+  @include viewport-xs {
+    flex-direction: column;
+
+    text-align: center;
+
+    .avatar {
+      margin-bottom: 40px;
+    }
+  }
 }
 
 .title,
@@ -43,6 +59,12 @@ section.container {
   display: flex;
   width: 100%;
   justify-content: space-between;
+
+  @include viewport-xs {
+    flex-direction: column;
+
+    width: max-content;
+  }
 }
 
 .button-container {

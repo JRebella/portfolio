@@ -1,82 +1,47 @@
 import classNames from "classnames";
-import Link from "next/link";
 import { FunctionComponent } from "react";
-import useScroll from "../../hooks/UseScroll";
+import useBooleanState from "../../hooks/useBooleanState";
+import useFixedOverlay from "../../hooks/useFixedOverlay";
 import Footer from "../../pageComponents/footer/Footer";
-
+import NavBar from "../NavBar/NavBar";
 import styles from "./layout.module.scss";
 
 const Layout: FunctionComponent = ({ children }) => {
+  const [isMenuOpen, toggleMenu] = useBooleanState(false);
+  useFixedOverlay(isMenuOpen);
+
   return (
     <div className={styles.container}>
-      <NavBar />
-      <main className={styles.main}>{children}</main>
-      <footer className={styles.footer}>
-        <Footer />
-      </footer>
+      <NavBar isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
 
-      <aside
-        className={classNames(
-          styles["banner--left"],
-          "animate__animated animate__fadeInUp"
-        )}
+      <div
+        className={classNames(styles.content, {
+          [styles["content--blur"]]: isMenuOpen,
+        })}
       >
-        JUAN REBELLA - SOFTWARE ENGINEER
-      </aside>
-      <aside
-        className={classNames(
-          styles["banner--right"],
-          "animate__animated animate__fadeInUp"
-        )}
-      >
-        JUAN REBELLA - SOFTWARE ENGINEER
-      </aside>
+        <main className={styles.main}>{children}</main>
+        <footer className={styles.footer}>
+          <Footer />
+        </footer>
 
-      <div className={styles["mobile-warning"]}>
-        <dialog>
-          Attention, the mobile version is still under construction. Please use the
-          desktop version for now!
-        </dialog>
+        <aside
+          className={classNames(
+            styles["banner--left"],
+            "animate__animated animate__fadeInUp"
+          )}
+        >
+          JUAN REBELLA - SOFTWARE ENGINEER
+        </aside>
+        <aside
+          className={classNames(
+            styles["banner--right"],
+            "animate__animated animate__fadeInUp"
+          )}
+        >
+          JUAN REBELLA - SOFTWARE ENGINEER
+        </aside>
       </div>
     </div>
   );
 };
-
-const NavBar: FunctionComponent = () => {
-  const { state } = useScroll(80);
-  return (
-    <nav className={classNames(styles.navbar, styles[`navbar--${state}`])}>
-      <Link href={"/"} passHref>
-        <div
-          className={classNames(
-            styles["jr-icon"],
-            "animate__animated  animate__fadeInDown"
-          )}
-        >
-          JR
-        </div>
-      </Link>
-      <ol
-        className={classNames(
-          styles["link-list"],
-          "animate__animated  animate__fadeInDown"
-        )}
-      >
-        <li>
-          <Link href={"/#about"}>About</Link>
-        </li>
-        <li>
-          <Link href={"/#experience"}>Experience</Link>
-        </li>
-        {/* <li>
-          <Link href={"#projects"}>Projects</Link>
-        </li> */}
-        <li>
-          <Link href={"/#contact"}>Contact</Link>
-        </li>
-      </ol>
-    </nav>
-  );
-};
-
 export default Layout;
