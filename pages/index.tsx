@@ -16,7 +16,7 @@ const Home: NextPage = () => {
 
       <HomeSection />
       <AboutSection />
-      {/* <ExperienceSection /> */}
+      <ExperienceSection />
       <ContactSection />
     </>
   );

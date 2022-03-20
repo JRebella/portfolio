@@ -4,6 +4,8 @@ import classNames from "classnames";
 import Link from "next/link";
 import { ComponentPropsWithoutRef, FunctionComponent } from "react";
 import useScroll from "../../hooks/UseScroll";
+import { CSSTransition, Transition } from "react-transition-group";
+
 import styles from "./navbar.module.scss";
 
 type NavBarProps = ComponentPropsWithoutRef<"nav"> & {
@@ -15,71 +17,83 @@ const NavBar: FunctionComponent<NavBarProps> = ({ isMenuOpen, toggleMenu, ...pro
   const { state } = useScroll(80);
 
   return (
-    <nav className={classNames(styles.navbar, styles[`navbar--${state}`])} {...props}>
-      <Link href={"/"} passHref>
-        <div
+    <nav {...props}>
+      <div className={classNames(styles.navbar, styles[`navbar--${state}`])}>
+        <Link href={"/"} passHref>
+          <div
+            className={classNames(
+              styles["jr-icon"],
+              "animate__animated animate__fadeInDown"
+            )}
+          >
+            JR
+          </div>
+        </Link>
+        <ol
           className={classNames(
-            styles["jr-icon"],
+            styles["link-list"],
             "animate__animated animate__fadeInDown"
           )}
         >
-          JR
-        </div>
-      </Link>
-      <ol
-        className={classNames(
-          styles["link-list"],
-          "animate__animated animate__fadeInDown"
-        )}
-      >
-        <li>
-          <Link href={"/#about"}>About</Link>
-        </li>
-        <li>
-          <Link href={"/#experience"}>Experience</Link>
-        </li>
-        {/* <li>
+          <li>
+            <Link href={"/#about"}>About</Link>
+          </li>
+          <li>
+            <Link href={"/#experience"}>Experience</Link>
+          </li>
+          {/* <li>
           <Link href={"#projects"}>Projects</Link>
         </li> */}
-        <li>
-          <Link href={"/#contact"}>Contact</Link>
-        </li>
-      </ol>
+          <li>
+            <Link href={"/#contact"}>Contact</Link>
+          </li>
+        </ol>
 
-      <button className={styles["menu-button"]} onClick={toggleMenu}>
-        <FontAwesomeIcon icon={faBars} />
-      </button>
+        <button className={styles["icon-button"]} onClick={toggleMenu}>
+          <FontAwesomeIcon icon={faBars} />
+        </button>
+      </div>
 
-      {isMenuOpen && (
-        <div className={styles["menu-overlay-wrapper"]}>
-          <button className={styles["menu-outside-close"]} onClick={toggleMenu} />
-          <aside
-            className={classNames(
-              styles["menu-overlay"],
-              "animate__animated animate__fadeInRight"
-            )}
+      <Transition timeout={500} in={isMenuOpen} unmountOnExit>
+        <div className={styles["menu-wrapper"]}>
+          <button className={styles["menu-outside"]} onClick={toggleMenu} />
+          <CSSTransition
+            timeout={500}
+            in={isMenuOpen}
+            classNames={{
+              exitActive: "animate__animated animate__fadeOutRight",
+            }}
           >
-            <button className={styles["menu-button"]} onClick={toggleMenu}>
-              <FontAwesomeIcon icon={faXmark} />
-            </button>
+            <aside
+              className={classNames(
+                styles["menu-overlay"],
+                "animate__animated animate__fadeInRight"
+              )}
+            >
+              <button className={styles["icon-button"]} onClick={toggleMenu}>
+                <FontAwesomeIcon icon={faXmark} />
+              </button>
 
-            <ol className={classNames(styles["link-list"], styles["link-list--mobile"])}>
-              <li onClick={toggleMenu}>
-                <Link href={"/#about"}>About</Link>
-              </li>
-              <li onClick={toggleMenu}>
-                <Link href={"/#experience"}>Experience</Link>
-              </li>
-              {/* <li onClick={toggleMenu}>
+              <ol
+                className={classNames(styles["link-list"], styles["link-list--mobile"])}
+              >
+                <li onClick={toggleMenu}>
+                  <Link href={"/#about"}>About</Link>
+                </li>
+                <li onClick={toggleMenu}>
+                  <Link href={"/#experience"}>Experience</Link>
+                </li>
+                {/* <li onClick={toggleMenu}>
                 <Link href={"#projects"}>Projects</Link>
               </li> */}
-              <li onClick={toggleMenu}>
-                <Link href={"/#contact"}>Contact</Link>
-              </li>
-            </ol>
-          </aside>
+                <li onClick={toggleMenu}>
+                  <Link href={"/#contact"}>Contact</Link>
+                </li>
+              </ol>
+            </aside>
+          </CSSTransition>
         </div>
-      )}
+      </Transition>
     </nav>
   );
 };

@@ -7,20 +7,22 @@ type ScrollState = "top" | "up" | "down";
 
 type UseScroll = (
   /** The frequency at which scroll position state will be updated, in MS (default 500ms) */
-  readFrequency?: number
+  readFrequency?: number,
+  /** The tolerance range in PX needed to detect a top state */
+  tolerance?: number
 ) => {
   /** The latest recorded scrolling state, top means top of the page, up means upward, down is downward */
   state: ScrollState;
 };
 
-const useScroll: UseScroll = (readFrequency = 500) => {
+const useScroll: UseScroll = (readFrequency = 500, tolerance = 40) => {
   const [scrollState, setScrollState] = useState<ScrollState>("top");
   const lastYPosition = useRef<number>(0);
 
   const scrollListener = useCallback(
     throttle(() => {
       const { scrollY } = window;
-      if (scrollY === 0) {
+      if (scrollY - tolerance <= 0) {
         setScrollState("top");
       } else if (scrollY < lastYPosition.current) {
         setScrollState("up");
