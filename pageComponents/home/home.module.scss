@@ -1,3 +1,5 @@
+@use "../../styles/viewports.scss" as *;
+
 section.container {
   justify-content: space-between;
   margin-top: 0;
@@ -6,6 +8,10 @@ section.container {
 
 .content {
   margin: 128px 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .title {
@@ -16,6 +22,16 @@ section.container {
   display: flex;
   align-items: center;
   margin-bottom: 80px;
+
+  @include viewport-xs {
+    flex-direction: column;
+
+    text-align: center;
+
+    .avatar {
+      margin-bottom: 40px;
+    }
+  }
 }
 
 .title,
@@ -27,6 +43,14 @@ section.container {
 .subtitle {
   color: var(--ds-text-primary);
   font-size: 46px;
+
+  @include viewport-xs {
+    font-size: 30px;
+  }
+
+  @include viewport-md {
+    font-size: 36px;
+  }
 }
 
 .avatar {
@@ -43,6 +67,12 @@ section.container {
   display: flex;
   width: 100%;
   justify-content: space-between;
+
+  @include viewport-xs {
+    flex-direction: column;
+
+    width: max-content;
+  }
 }
 
 .button-container {
@@ -54,13 +84,35 @@ section.container {
   span {
     margin: 8px;
   }
+
+  @include viewport-xs {
+    margin-bottom: 20px;
+  }
 }
 
 .more-arrow {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
   color: var(--ds-primary);
+
+  cursor: pointer;
 
   animation-delay: 1.2s;
   --animate-duration: 2s;
 
   margin-bottom: 24px;
+  opacity: 0;
+
+  transition: opacity 0.5s ease-in;
+
+  @include viewport-xs {
+    display: none;
+  }
+}
+
+.more-arrow--top {
+  opacity: 1;
 }

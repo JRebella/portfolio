@@ -43,6 +43,8 @@ body {
 :root {
   --ds-bg-primary: #0a192f;
   --ds-bg-primary-rgb: #{hexToRGB(#0a192f)};
+  --ds-bg-secondary: #112240;
+  --ds-bg-secondary-rgb: #{hexToRGB(#112240)};
   --ds-bg-accent: #233554;
   --ds-bg-accent-rgb: #{hexToRGB(#233554)};
   --ds-primary: #64ffda;
@@ -76,6 +78,21 @@ body {
   }
   h4 {
     font-size: 13px;
+  }
+
+  @include viewport-xs {
+    h1 {
+      font-size: 38px;
+    }
+    h2 {
+      font-size: 32px;
+    }
+    h3 {
+      font-size: 20px;
+    }
+    h4 {
+      font-size: 13px;
+    }
   }
 }
 

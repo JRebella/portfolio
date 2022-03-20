@@ -1,0 +1,184 @@
+@use "../../styles/viewports.scss" as *;
+
+.navbar {
+  position: fixed;
+  top: 0;
+
+  --nav-scroll-height: 75px;
+  height: var(--nav-scroll-height);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  padding: 0 50px;
+
+  @include viewport-xs {
+    padding: 0px 25px;
+  }
+
+  @include viewport-md {
+    padding: 0px 35px;
+  }
+
+  background-color: rgba(var(--ds-bg-primary-rgb), 0.85);
+  z-index: 10;
+
+  transition: all 0.2s ease-in;
+  box-shadow: 0 20px 60px -10px var(--ds-shadow);
+}
+
+.navbar--top {
+  box-shadow: none;
+}
+.navbar--up {
+  transform: translateY(0px);
+}
+.navbar--down {
+  transform: translateY(calc(var(--nav-scroll-height) * -1));
+}
+
+.jr-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+
+  height: 42px;
+  width: 42px;
+
+  font-size: 28px;
+  line-height: 0.8;
+
+  padding: 2px;
+
+  font-weight: bold;
+
+  color: var(--ds-bg-primary);
+
+  background-color: var(--ds-primary);
+  transition: background-color 0.25s ease-out;
+  &:hover {
+    background-color: transparent;
+    -webkit-text-stroke: 2px var(--ds-primary);
+  }
+
+  border: 2px solid var(--ds-primary);
+  border-radius: 2px;
+
+  cursor: pointer;
+}
+
+.link-list {
+  display: flex;
+
+  @include viewport-xs {
+    display: none;
+  }
+
+  li {
+    &::marker {
+      content: none;
+    }
+
+    a {
+      display: inline-block;
+      font-size: 14px;
+      padding: 10px 14px;
+
+      color: var(--ds-text-accent);
+      text-decoration: none;
+
+      &:hover {
+        color: var(--ds-primary);
+      }
+
+      &::before {
+        content: "0" counter(list-item) ".";
+
+        margin-right: 5px;
+        color: var(--ds-primary);
+      }
+    }
+  }
+}
+
+.link-list--mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  width: 100%;
+  flex-grow: 1;
+
+  padding: 0;
+
+  li a {
+    font-size: 24px;
+  }
+}
+
+.icon-button {
+  display: none;
+
+  @include viewport-xs {
+    display: flex;
+  }
+
+  align-items: center;
+  justify-content: center;
+
+  height: 34px;
+  width: 34px;
+
+  background-color: transparent;
+  border: none;
+  padding: 0;
+
+  color: var(--ds-primary);
+  cursor: pointer;
+
+  font-size: 28px;
+
+  &:hover {
+    background-color: var(--ds-bg-accent);
+  }
+}
+
+.menu-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  z-index: 10;
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 20px 25px;
+
+  height: 100vh;
+  width: min(75vw, 400px);
+  background-color: var(--ds-bg-secondary);
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  box-shadow: -10px 0px 30px -15px var(--ds-shadow);
+}
+
+.menu-outside {
+  width: 100vw;
+
+  background-color: transparent;
+  border: none;
+}

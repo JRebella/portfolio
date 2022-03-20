@@ -1,7 +1,13 @@
+@use "../../styles/viewports.scss" as *;
+
 .container {
   width: 100%;
 
   display: flex;
+
+  @include viewport-xs {
+    flex-direction: column;
+  }
 }
 
 .buttons {
@@ -11,6 +17,12 @@
   margin-right: 20px;
 
   flex-shrink: 0;
+
+  @include viewport-xs {
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
 }
 
 .button {
@@ -23,6 +35,11 @@
   border: none;
   border-left: 2px solid var(--ds-bg-accent);
   color: var(--ds-text-primary);
+
+  @include viewport-xs {
+    border: none;
+    border-bottom: 2px solid var(--ds-bg-accent);
+  }
 
   cursor: pointer;
 
@@ -40,16 +57,18 @@
 }
 
 .tab-content-container {
-  position: relative;
   flex-grow: 1;
+  transition: 0.15s;
 }
 
-.tab-content {
-  position: absolute;
+.fade--entering {
+  opacity: 0;
+}
 
-  transition: visibility 0.2s ease-out, opacity 0.2s linear;
-  &[data-hidden="true"] {
-    opacity: 0;
-    visibility: hidden;
-  }
+.fade--enter {
+  opacity: 1;
+}
+
+.fade--exit {
+  opacity: 0;
 }
