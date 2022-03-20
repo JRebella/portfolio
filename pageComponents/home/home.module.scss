@@ -7,7 +7,7 @@ section.container {
 }
 
 .content {
-  margin-top: 128px;
+  margin: 128px 0;
 
   display: flex;
   flex-direction: column;
@@ -42,7 +42,15 @@ section.container {
 
 .subtitle {
   color: var(--ds-text-primary);
-  font-size: 30px;
+  font-size: 46px;
+
+  @include viewport-xs {
+    font-size: 30px;
+  }
+
+  @include viewport-md {
+    font-size: 36px;
+  }
 }
 
 .avatar {
@@ -83,6 +91,11 @@ section.container {
 }
 
 .more-arrow {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
   color: var(--ds-primary);
 
   cursor: pointer;
@@ -94,6 +107,10 @@ section.container {
   opacity: 0;
 
   transition: opacity 0.5s ease-in;
+
+  @include viewport-xs {
+    display: none;
+  }
 }
 
 .more-arrow--top {

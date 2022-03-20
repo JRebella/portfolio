@@ -56,14 +56,15 @@ const HomeSection: FunctionComponent<ComponentProps<"section">> = () => {
         </div>
       </div>
       <Link href="#about" passHref>
-        <FontAwesomeIcon
-          icon={faAnglesDown}
+        <div
           className={classNames(
             styles["more-arrow"],
             styles[`more-arrow--${state}`],
             "animate__animated animate__shakeY"
           )}
-        />
+        >
+          <FontAwesomeIcon icon={faAnglesDown} />
+        </div>
       </Link>
     </section>
   );
