@@ -60,7 +60,7 @@ const ExperienceSection: FunctionComponent<ComponentProps<"section">> = () => {
             </li>
           </ul>
 
-          <h5>Used technologies</h5>
+          <h5>Technologies used</h5>
 
           <Badge>React</Badge>
           <Badge>Next.js</Badge>
@@ -102,7 +102,7 @@ const ExperienceSection: FunctionComponent<ComponentProps<"section">> = () => {
             </li>
           </ul>
 
-          <h5>Used technologies</h5>
+          <h5>Technologies used</h5>
 
           <Badge>React</Badge>
           <Badge>Node</Badge>
@@ -146,7 +146,7 @@ const ExperienceSection: FunctionComponent<ComponentProps<"section">> = () => {
             <li>Data visualization and analytics</li>
           </ul>
 
-          <h5>Used technologies</h5>
+          <h5>Technologies used</h5>
 
           <Badge>React</Badge>
           <Badge>GoLang</Badge>
