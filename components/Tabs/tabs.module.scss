@@ -1,7 +1,13 @@
+@use "../../styles/viewports.scss" as *;
+
 .container {
   width: 100%;
 
   display: flex;
+
+  @include viewport-xs {
+    flex-direction: column;
+  }
 }
 
 .buttons {
@@ -40,16 +46,18 @@
 }
 
 .tab-content-container {
-  position: relative;
   flex-grow: 1;
+  transition: 0.15s;
 }
 
-.tab-content {
-  position: absolute;
+.fade--entering {
+  opacity: 0;
+}
 
-  transition: visibility 0.2s ease-out, opacity 0.2s linear;
-  &[data-hidden="true"] {
-    opacity: 0;
-    visibility: hidden;
-  }
+.fade--enter {
+  opacity: 1;
+}
+
+.fade--exit {
+  opacity: 0;
 }

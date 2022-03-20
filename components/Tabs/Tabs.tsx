@@ -10,6 +10,7 @@ import {
   ReactNode,
   useMemo,
 } from "react";
+import { CSSTransition, SwitchTransition } from "react-transition-group";
 
 import styles from "./tabs.module.scss";
 
@@ -54,14 +55,7 @@ export const Tabs: FunctionComponent<TabsProps> = ({
   ...props
 }) => {
   const childrenTabContents = useMemo(
-    () =>
-      Children.map(children, (child) => {
-        const item = child as ReactElement<PropsWithChildren<TabContentProps>>;
-
-        const isActive = item.props.id === activeTabID;
-
-        return cloneElement(item, { isActive });
-      }),
+    () => children.find((child) => child.props.id === activeTabID),
     [children, activeTabID]
   );
 
@@ -88,7 +82,21 @@ export const Tabs: FunctionComponent<TabsProps> = ({
           </button>
         ))}
       </div>
-      <div className={styles["tab-content-container"]}>{childrenTabContents}</div>
+      <SwitchTransition mode="out-in">
+        <CSSTransition
+          key={activeTabID}
+          timeout={150}
+          unmountOnExit
+          mountOnEnter
+          classNames={{
+            enter: styles["fade--entering"],
+            enterActive: styles["fade--enter"],
+            exitActive: styles["fade--exit"],
+          }}
+        >
+          <div className={styles["tab-content-container"]}>{childrenTabContents}</div>
+        </CSSTransition>
+      </SwitchTransition>
     </div>
   );
 };
