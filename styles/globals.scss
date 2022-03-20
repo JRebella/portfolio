@@ -79,6 +79,21 @@ body {
   h4 {
     font-size: 13px;
   }
+
+  @include viewport-xs {
+    h1 {
+      font-size: 38px;
+    }
+    h2 {
+      font-size: 32px;
+    }
+    h3 {
+      font-size: 20px;
+    }
+    h4 {
+      font-size: 13px;
+    }
+  }
 }
 
 .text-accent {

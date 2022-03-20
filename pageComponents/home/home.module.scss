@@ -7,7 +7,7 @@ section.container {
 }
 
 .content {
-  margin: 128px 0;
+  margin-top: 128px;
 
   display: flex;
   flex-direction: column;
@@ -42,7 +42,7 @@ section.container {
 
 .subtitle {
   color: var(--ds-text-primary);
-  font-size: 46px;
+  font-size: 30px;
 }
 
 .avatar {
@@ -75,6 +75,10 @@ section.container {
 
   span {
     margin: 8px;
+  }
+
+  @include viewport-xs {
+    margin-bottom: 20px;
   }
 }
 
