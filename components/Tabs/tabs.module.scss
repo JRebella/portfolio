@@ -17,6 +17,12 @@
   margin-right: 20px;
 
   flex-shrink: 0;
+
+  @include viewport-xs {
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
 }
 
 .button {
@@ -29,6 +35,11 @@
   border: none;
   border-left: 2px solid var(--ds-bg-accent);
   color: var(--ds-text-primary);
+
+  @include viewport-xs {
+    border: none;
+    border-bottom: 2px solid var(--ds-bg-accent);
+  }
 
   cursor: pointer;
 
