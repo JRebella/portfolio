@@ -1,6 +1,7 @@
 @use "../../styles/viewports.scss" as *;
 
-.container {
+.container,
+.content {
   min-height: 100vh;
 
   display: flex;
