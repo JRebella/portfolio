@@ -16,7 +16,7 @@ const AboutSection: FunctionComponent<ComponentProps<"section">> = () => {
         <p>
           Hey there, I&apos;m <span className="text-accent">Juan</span>. I&apos;m a{" "}
           <span className="text-accent">software engineer from Uruguay</span> and I
-          specialize on frontend development with{" "}
+          specialize in frontend development with{" "}
           <span className="text-accent">React.js.</span>
         </p>
 
