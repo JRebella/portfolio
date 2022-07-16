@@ -6,7 +6,7 @@ import { TabContent, Tabs } from "../../components/Tabs/Tabs";
 import styles from "./experience.module.scss";
 
 const ExperienceSection: FunctionComponent<ComponentProps<"section">> = () => {
-  const [active, setActive] = useState<Key>("spark");
+  const [active, setActive] = useState<Key>("expressable");
   return (
     <section
       className={styles.container}
@@ -16,28 +16,84 @@ const ExperienceSection: FunctionComponent<ComponentProps<"section">> = () => {
       <h2 id="section-experience">My Experience</h2>
       <Tabs onChangeTabID={setActive} activeTabID={active}>
         <TabContent
-          title="Spark Digital"
-          id={"spark"}
+          title="Expressable"
+          id={"expressable"}
           className={styles["tab-container"]}
         >
           <h3 className={styles["job-title"]}>
-            Frontend Engineer{" "}
+            Tech Lead{" "}
             <AnchorLink
-              href="https://www.sparkdigital.com/en/"
+              href="https://www.expressable.io/"
               target={"_blank"}
               rel="noreferrer"
               variant="colored"
             >
-              @ Spark Digital
+              @ Expressable
             </AnchorLink>
           </h3>
-          <h4>January 2021 - Present</h4>
+          <h4>May 2022 - Present</h4>
 
           <ul className="styled-ul">
             <li>
-              Frontend technology lead and main developer for a fully-accessible platform
-              in the EdTech industry. Large data visualization and manipulation within a
-              modern UI and excellent UX
+              Frontend Technology Lead on a team of ~15 engineers with multiple
+              interconnected projects for the American Health industry
+            </li>
+            <li>
+              Define and maintain quality standards. Provide guidance to help the team
+              increase maintainability of the codebases. Standardize technologies across
+              applications. Set up tooling to enforce code quality, unit test coverage,
+              etc.
+            </li>
+            <li>Provide accessibility expertize in order to meet industry standards</li>
+            <li>
+              Frontend DevOps for the various production applications. Build CI/CD
+              solutions and toolings to increase team efficiency
+            </li>
+            <li>
+              Study how the different areas of the team communicate and work together (QA,
+              design, product, development), identify bottlenecks and inefficiencies in
+              order to devise improved engineering processes and increase overall
+              productivity
+            </li>
+            <li>
+              Working closely with UX/UI experts to build an internal design system in
+              order to standardize the company&apos;s image and increase reusability
+              across projects
+            </li>
+          </ul>
+
+          <Badge>React</Badge>
+          <Badge>DevOps</Badge>
+          <Badge>Microservices</Badge>
+          <Badge>Typescript</Badge>
+          <Badge>Accessibility</Badge>
+          <Badge>TailwindCSS</Badge>
+          <Badge>Github Actions</Badge>
+          <Badge>ES6</Badge>
+          <Badge>Storybook</Badge>
+          <Badge>Node</Badge>
+          <Badge>Jest</Badge>
+          <Badge>Testing-library</Badge>
+        </TabContent>
+        <TabContent title="W.W. Norton" id={"norton"} className={styles["tab-container"]}>
+          <h3 className={styles["job-title"]}>
+            Frontend Engineer{" "}
+            <AnchorLink
+              href="https://wwnorton.com/"
+              target={"_blank"}
+              rel="noreferrer"
+              variant="colored"
+            >
+              @ W.W. Norton
+            </AnchorLink>
+          </h3>
+          <h4>January 2021 - May 2022</h4>
+
+          <ul className="styled-ul">
+            <li>
+              Frontend lead developer for a fully-accessible platform in the EdTech
+              industry. Large data visualization and manipulation within a modern UI and
+              excellent UX
             </li>
 
             <li>
@@ -60,10 +116,10 @@ const ExperienceSection: FunctionComponent<ComponentProps<"section">> = () => {
             </li>
           </ul>
 
-          <h5>Technologies used</h5>
-
           <Badge>React</Badge>
           <Badge>Next.js</Badge>
+          <Badge>Accessibility</Badge>
+          <Badge>Microservices</Badge>
           <Badge>Sass</Badge>
           <Badge>ES6</Badge>
           <Badge>Storybook</Badge>
@@ -101,8 +157,6 @@ const ExperienceSection: FunctionComponent<ComponentProps<"section">> = () => {
               variable periods of time and a multitude of filters and graphs
             </li>
           </ul>
-
-          <h5>Technologies used</h5>
 
           <Badge>React</Badge>
           <Badge>Node</Badge>
@@ -145,8 +199,6 @@ const ExperienceSection: FunctionComponent<ComponentProps<"section">> = () => {
             </li>
             <li>Data visualization and analytics</li>
           </ul>
-
-          <h5>Technologies used</h5>
 
           <Badge>React</Badge>
           <Badge>GoLang</Badge>

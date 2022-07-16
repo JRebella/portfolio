@@ -21,24 +21,23 @@ const AboutSection: FunctionComponent<ComponentProps<"section">> = () => {
         </p>
 
         <p>
-          Despite my passion for Frontend, I also had my years as a full stack developer.
-          I had the opportunity to work at a small startup where I rotated through a
-          multitude of small/medium projects and clients, allowing me to gain experience
-          in many areas including DevOps and Machine Learning.
+          Despite my passion for Frontend, I kickstarted my career as a full stack
+          developer working for a very small startup. There I had the opportunity to work
+          with a multitude of small/medium projects and clients, allowing me to gain
+          experience in many technologies and areas including DevOps and Machine Learning.
         </p>
 
         <p>
-          Today I&apos;m currently working on building an{" "}
+          Nowadays I&apos;m working as a{" "}
+          <span className="text-accent">Technical Lead</span> for an{" "}
           <AnchorLink
-            href="https://wwnorton.github.io/design-system/"
+            href="https://www.expressable.io/"
             target={"_blank"}
             variant="colored"
           >
-            open source design system
-          </AnchorLink>{" "}
-          with a focus on <span className="text-accent">accessibility</span> using{" "}
-          <span className="text-accent">React</span> &{" "}
-          <span className="text-accent">Sass</span> (along many other technologies).
+            American company in the Health Industry
+          </AnchorLink>
+          .
         </p>
       </section>
       <aside aria-labelledby="aside-technologies" className={styles.technologies}>
