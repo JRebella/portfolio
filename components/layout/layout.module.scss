@@ -24,14 +24,14 @@
 
   counter-reset: section;
   section {
-    min-height: 60vh;
+    // min-height: 60vh;
     display: flex;
     flex-direction: column;
     align-items: center;
 
     justify-content: flex-start;
 
-    margin-top: 20px;
+    // margin-top: 20px;
 
     h2 {
       display: flex;
@@ -70,7 +70,7 @@
     padding: 0px 25px;
   }
   @include viewport-md {
-    padding: 0px 50px;
+    padding: 0px 42px;
   }
   @include viewport-xl {
     padding: 0px 150px;

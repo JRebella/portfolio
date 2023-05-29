@@ -4,8 +4,9 @@
   white-space: nowrap;
 
   &.accented {
-    font-weight: bold;
+    font-weight: 200;
     color: var(--ds-text-accent);
+    color: var(--ds-primary);
 
     transition: color 0.2s ease-in;
     &:hover {

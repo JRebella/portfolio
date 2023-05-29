@@ -1,6 +1,10 @@
 @use "./components/UnorderedList/ul.module.scss" as *;
 @use "./viewports.scss" as *;
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
@@ -103,5 +107,6 @@ body {
 // Components
 
 .styled-ul {
+  @apply text-xs;
   @include unordered-list;
 }

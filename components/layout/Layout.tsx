@@ -12,7 +12,7 @@ const Layout: FunctionComponent = ({ children }) => {
 
   return (
     <div className={styles.container}>
-      <NavBar isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
+      {/* <NavBar isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} /> */}
 
       <div
         className={classNames(styles.content, {
@@ -20,9 +20,9 @@ const Layout: FunctionComponent = ({ children }) => {
         })}
       >
         <main className={styles.main}>{children}</main>
-        <footer className={styles.footer}>
+        {/* <footer className={styles.footer}>
           <Footer />
-        </footer>
+        </footer> */}
 
         <aside
           className={classNames(

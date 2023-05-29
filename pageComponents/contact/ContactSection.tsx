@@ -6,10 +6,15 @@ import { ComponentProps, FunctionComponent, Key, useState } from "react";
 import Button from "../../components/Button";
 import AnchorLink from "../../components/Link/AnchorLink";
 import styles from "./contact.module.scss";
+import classNames from "classnames";
 
-const ContactSection: FunctionComponent<ComponentProps<"section">> = () => {
+const ContactSection: FunctionComponent<ComponentProps<"section">> = ({ className }) => {
   return (
-    <section className={styles.container} id="contact" aria-labelledby="section-contact">
+    <section
+      className={classNames(styles.container, className)}
+      id="contact"
+      aria-labelledby="section-contact"
+    >
       <h2 id="section-contact">Contact Me</h2>
       <p>
         Do you have an interesting project and think I could be a good fit?
