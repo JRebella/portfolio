@@ -21,7 +21,7 @@ const ExperienceSection: FunctionComponent<ComponentProps<"section">> = () => {
           className={styles["tab-container"]}
         >
           <h3 className={styles["job-title"]}>
-            Tech Lead{" "}
+            Tech Lead | Staff Frontend Engineer (Technical IC){" "}
             <AnchorLink
               href="https://www.expressable.io/"
               target={"_blank"}
@@ -32,36 +32,33 @@ const ExperienceSection: FunctionComponent<ComponentProps<"section">> = () => {
             </AnchorLink>
           </h3>
           <h4>May 2022 - Present</h4>
-
+          Technical lead in a team of 15 engineers, serving as the most senior frontend
+          IC. Responsible for the architectural vision, code quality standards, and
+          long-term maintainability across projects.
           <ul className="styled-ul">
             <li>
-              Frontend Technology Lead on a team of ~15 engineers with multiple
-              interconnected projects for the American Health industry
+              Designed and maintained scalable architecture using React, Next.js, Vite,
+              and TypeScript
             </li>
             <li>
-              Define and maintain quality standards. Provide guidance to help the team
-              increase maintainability of the codebases. Standardize technologies across
-              applications. Set up tooling to enforce code quality, unit test coverage,
-              etc.
-            </li>
-            <li>Provide accessibility expertize in order to meet industry standards</li>
-            <li>
-              Frontend DevOps for the various production applications. Build CI/CD
-              solutions and toolings to increase team efficiency
+              Owned code quality guidelines, PR review processes, and technical mentorship
             </li>
             <li>
-              Study how the different areas of the team communicate and work together (QA,
-              design, product, development), identify bottlenecks and inefficiencies in
-              order to devise improved engineering processes and increase overall
-              productivity
+              Led the design system project with Storybook, Tailwind, and component-driven
+              architecture
             </li>
             <li>
-              Working closely with UX/UI experts to build an internal design system in
-              order to standardize the company&apos;s image and increase reusability
-              across projects
+              Integrated external tools: Contentful, Mixpanel, Cloudflare Workers, etc.
+            </li>
+            <li>
+              Improved DX and CI/CD workflows via GitHub Actions and tooling evaluations
             </li>
           </ul>
-
+          <div style={{ marginBottom: "1rem" }}>
+            Act as technical mentor to the team: review architectural proposals, support
+            design discussions, and guide implementation through mentorship—not
+            management.
+          </div>
           <Badge>React</Badge>
           <Badge>DevOps</Badge>
           <Badge>Microservices</Badge>

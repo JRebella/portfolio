@@ -41,14 +41,14 @@ const AboutSection: FunctionComponent<ComponentProps<"section">> = () => {
         </p>
       </section>
       <aside aria-labelledby="aside-technologies" className={styles.technologies}>
-        <h3 id="aside-technologies">My strong fields</h3>
+        <h3 id="aside-technologies">My most used technologies</h3>
         <ul className="styled-ul">
-          <li>JavaScript (ES6+)</li>
           <li>React.js</li>
+          <li>JavaScript (ES6+)</li>
           <li>Typescript</li>
           <li>Next.js</li>
-          <li>W3C Aria</li>
           <li>GoLang</li>
+          <li>Tailwind CSS</li>
           <li>Sass / CSS</li>
         </ul>
       </aside>
