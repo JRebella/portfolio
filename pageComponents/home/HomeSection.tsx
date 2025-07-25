@@ -1,4 +1,8 @@
-import { faAnglesDown, faArrowDown, faDownload } from "@fortawesome/free-solid-svg-icons";
+import {
+  faAnglesDown,
+  faArrowDown,
+  faDownload,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import classNames from "classnames";
 import Image from "next/image";
@@ -13,7 +17,10 @@ const HomeSection: FunctionComponent<ComponentProps<"section">> = () => {
   const { state } = useScroll(800);
   return (
     <section
-      className={classNames(styles.container, "animate__animated  animate__fadeInDown")}
+      className={classNames(
+        styles.container,
+        "animate__animated  animate__fadeInDown"
+      )}
       id="home"
       aria-labelledby="section-home"
     >
@@ -47,7 +54,7 @@ const HomeSection: FunctionComponent<ComponentProps<"section">> = () => {
 
           <div className={styles["button-container"]}>
             <span>On a hurry?</span>
-            <a href="/Juan Rebella2022.pdf" target={"_blank"}>
+            <a href="/Juan Rebella 2025.pdf" target={"_blank"}>
               <Button>
                 Download CV (.pdf) <FontAwesomeIcon icon={faDownload} />
               </Button>
